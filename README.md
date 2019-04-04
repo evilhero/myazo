@@ -1,5 +1,5 @@
 # Myazo
-_<p align="center">(This is a fork of Myazo - the intention of this is to send directly to a linx-server instead of using the included upload.php file)</p>_
+_<p align="center">(This is a fork of Myazo - the intention of this is to send directly to a [linx-server](https://github.com/andreimarcu/linx-server) instead of using the included upload.php file)</p>_
 
 ![Demo](https://raw.githubusercontent.com/migueldemoura/myazo/master/demo.gif)
 
