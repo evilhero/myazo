@@ -1,8 +1,7 @@
 # Myazo
+_<p align="center">(This is a fork of Myazo - the intention of this is to send directly to a linx-server instead of using the included upload.php file)</p>_
 
 ![Demo](https://raw.githubusercontent.com/migueldemoura/myazo/master/demo.gif)
-
-`(This is a fork of Myazo - the intention of this is to send directly to a linx-server instead of using the included upload.php file)`
 
 Myazo is a self-hosted [Gyazo] alternative. It allows you to take a screenshot of part of your screen and automatically upload it to your own server.
 
