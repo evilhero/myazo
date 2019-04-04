@@ -17,8 +17,9 @@ config = ConfigParser()
 config.read_dict({'Myazo': {
     'gyazo_server': False, # If True, upload_script and secret are ignored
     'gyazo_direct_link': True, # Ignored if gyazo_server is False
-    'upload_script': 'https://myazo.example.com/upload.php',
-    'secret': 'hunter2',
+    'myazo_linx': True, # if True, will send directly to linx - if False will send to server/upload.php
+    'upload_script': 'https://your.linxurl.here/upload',
+    'secret': 'your linx_apikey here',
     'clear_metadata': True,
     'open_browser': True,
     'copy_clipboard': True,
@@ -76,6 +77,13 @@ if config.getboolean('gyazo_server'):
     r = requests.post(
         'https://upload.gyazo.com/upload.cgi',
         files={'imagedata': img}
+    )
+elif config.getboolean('myazo_linx'):
+    r = requests.put(
+        config.get('upload_script'),
+        headers={'Linx-Api-Key': config.get('secret'),
+                 'Content-Type': 'image/png'},
+        data=img
     )
 else:
     r = requests.post(
