@@ -20,9 +20,6 @@ The following OSes have off-the-shelf compatibility. You can add more back ends 
 * macOS
 * Windows 10 >= 1703 Creators Update (check with `winver` - Build >= 10.0.15063.251)
 
-### Client
-
-
 ## Installation
 
 * Install [Python] 3 and choose the version matching your CPU arch (x86 or x86-64);
@@ -32,7 +29,7 @@ The following OSes have off-the-shelf compatibility. You can add more back ends 
 pip install -r client/src/requirements.txt
 ```
 
-If myazo_linx is True (you are wanting to send the image directly to a linx server, instead of sending it to wherever upload.php is):
+If `myazo_linx` is `True` (you are wanting to send the image directly to a linx server, instead of sending it to wherever upload.php is):
 * Enter in your linx-api-key in the variable `secret` in `client/src/myazo.py`;
 * Enter in the the full linx upload url in the variable `upload_script` in `client/src/myazo.py`;
 * On Windows: either run the myazo.py from a command line, or change extension to .pyw and double-click away.
