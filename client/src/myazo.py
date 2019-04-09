@@ -101,7 +101,7 @@ if config.getboolean('gyazo_server') and config.getboolean('gyazo_direct_link'):
     # https://gyazo.com/hash > https://i.gyazo.com/hash.extension
     url = r.text.replace('//', '//i.') + Path(tmp_file).suffix
 else:
-    url = r.text
+    url = r.text.replace('\n', '').replace('\r', '')
 
 if config.getboolean('open_browser'):
     webbrowser.open(url)
