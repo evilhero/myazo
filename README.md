@@ -70,19 +70,20 @@ If an external file is found, Myazo extends the default config with the provided
 * Example Config: `client/src/config.ini.example`
 * Placement Path: `~/.config/myazo/config.ini` (`~` refers to the user directory)
 
-| Key                | Default                                | Description                                           |
-|--------------------|----------------------------------------|-----------------------------------------------------++|
-| gyazo_server       | False                                  | Controls whether to use Gyazo's servers               |
-| gyazo_direct_link  | True                                   | Controls whether to open Gyazo direct image url       |
-| myazo_linx         | True                                   | Controls whether to send to linx server directly      |
-| upload_script      | 'https://myazo.example.com/upload.php' | Full path to the upload.php file (or linx upload URL) |
-| secret             | 'hunter2'                              | Secret token                                          |
-| clear_metadata     | True                                   | Controls clearing screenshot metadata before upload   |
-| open_browser       | True                                   | Controls open url in default browser after upload     |
-| copy_clipboard     | True                                   | Controls copy url to clipboard after upload           |
-| output_url         | True                                   | Controls print url to stdout after upload             |
+| Key                | Default                                | Description                                         |
+|--------------------|----------------------------------------|-----------------------------------------------------|
+| gyazo_server       | False                                  | Controls whether to use Gyazo's servers             |
+| gyazo_direct_link  | True                                   | Controls whether to open Gyazo direct image url     |
+| myazo_linx         | True                                   | Controls whether to send to linx server directly    |
+| upload_script      | 'https://myazo.example.com/upload'     | Full path to the linx Upload URL                    |
+| secret             | 'hunter2'                              | Secret token                                        |
+| clear_metadata     | True                                   | Controls clearing screenshot metadata before upload |
+| open_browser       | True                                   | Controls open url in default browser after upload   |
+| copy_clipboard     | True                                   | Controls copy url to clipboard after upload         |
+| output_url         | True                                   | Controls print url to stdout after upload           |
 
 Please note that if `gyazo_server` is set to `True`, `upload_script` and `secret` are ignored.
+Also, `gyazo_server` must be set to `False` if `myazo_linx` is set to True.
 
 ### Server
 *** NOTE: NOT REQUIRED IF myazo_linx is set to True ***
